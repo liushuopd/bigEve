@@ -32,6 +32,7 @@ $(function () {
             username: $('#id_0username').val(),
             password: $('#repass').val()
         }, function (data) {
+            console.log(data)
             // 处理响应数据
             if (data.status === 0) {
                 console.log(data.message)
@@ -41,6 +42,7 @@ $(function () {
         })
     });
     // 发送登录请求
+
 
 
 });
