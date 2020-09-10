@@ -28,21 +28,37 @@ $(function () {
     // 发送ajax请求 注册请求
     $('#form-reg').on('submit', function (e) {
         e.preventDefault();
-        $.post('http://ajax.frontend.itheima.net/api/reguser', {
+        $.post('/api/reguser', {
             username: $('#id_0username').val(),
             password: $('#repass').val()
         }, function (data) {
             console.log(data)
             // 处理响应数据
             if (data.status === 0) {
-                console.log(data.message)
-            } else {
-                console.log(data.message)
+                $('#link-reg').click();
             }
+            layui.layer.msg(data.message);
         })
     });
+
     // 发送登录请求
+    $('#btn_login').on('submit', function (e) {
+        e.preventDefault();
+        // 1.获取表单序列化的值
+        let formdata = $(this).serialize();
+        // 2.发送请求
+        $.post('/api/login', formdata, function (data) {
+            console.log(data)
+            // 3.业务处理
+            if (data.status === 0) {
+                // 4.跳转页面
+                location.href = './index.html'
 
+                // 5.将令牌保存到本地存储中、
+                data.token.length != 0 && localStorage.setItem('token', data.token)
 
-
+            }
+            layui.layer.msg(data.message);
+        })
+    })
 });

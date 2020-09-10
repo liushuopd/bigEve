@@ -18,7 +18,7 @@
     <script src="/assets/lib/jquery.js"></script>
     <!-- node阶段会讲模块化，非模块化的引入方式 -->
     <script src="/assets/lib/layui/layui.all.js"></script>
-
+    <script src="./assets/js/uilits.js"></script>
     <script src="/assets/js/login.js"></script>
 </head>
 
@@ -34,17 +34,17 @@
         <div class="title-box"></div>
         <!-- 登录 -->
         <div class="login-box">
-            <form class="layui-form">
+            <form class="layui-form" id="btn_login">
                 <!-- 用户名 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
-                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 密码 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
-                    <input type="password" name="title" required lay-verify="required|password" placeholder="请输入密码"
+                    <input type="password" name="password" required lay-verify="required|password" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 登录按钮 -->
