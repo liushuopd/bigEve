@@ -55,7 +55,7 @@
 
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all">
                     <li class="layui-nav-item layui-this">
-                        <a class="" href="/home/dashboard.html" target="fm">
+                        <a href="/home/dashboard.html" target="fm">
                             <span class="iconfont icon-home"></span>
                             首页</a>
                     </li>
@@ -63,12 +63,6 @@
                         <a href="javascript:;">
                             <span class="iconfont icon-16"></span>
                             文章管理</a>
-
-                        <!-- 
-<i class="layui-icon layui-icon-app"></i>   
-
-
-               -->
                         <dl class="layui-nav-child">
                             <dd>
                                 <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 文章类别</a>
@@ -87,13 +81,16 @@
                             个人中心</a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 基本资料</a>
+                                <a href="/user/user_info.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    基本资料</a>
                             </dd>
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 更换头像</a>
+                                <a href="/user/user_avatar.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    更换头像</a>
                             </dd>
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 重置密码</a>
+                                <a href="/user/user_pwd.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    重置密码</a>
                             </dd>
                         </dl>
                     </li>
@@ -116,7 +113,7 @@
 
     <script src="/assets/lib/layui/layui.all.js"></script>
 
-    <script src="/assets/js/uilits.js"></script>
+    <script src="/assets/js/utils.js"></script>
     <script src="/assets/js/index.js"></script>
 </body>
 

@@ -5,59 +5,45 @@ $(function () {
      * url : /my/userinfo
      * type : GET
      */
-    $.get("/my/userinfo",
-        function (data) {
-            // 1.获取用户名 || 昵称
-            var res = data.data.nickname || data.data.username;
-            // 2.侧边栏欢迎语设置
-            $('#welcome').html(res)
-            console.log(data);
-            // 3.判断头像是否存在 
-            if (data.data.user_pic) {
-                // 3.1 头像存在
-                $('.text-avatar').hide()
-                $('.layui-nav-img').show().attr('src', 'data.data.user_pic')
-            } else {
-                // 3.2 头像不存在
-                $('.layui-nav-img').hide()
-                $('.text-avatar').show().html(res[0].toUpperCase())
-            }
-        }
-    );
-
     // 获取用户信息
-    // function getUserInfo() {
-    //     $.ajax({
-    //         type: "get",
-    //         url: "/my/userinfo",
-    //         // data: "data",
-    //         // dataType: "dataType",
-    //         success: function (data) {
-    //             // 1.获取用户名 || 昵称
-    //             var res = data.data.nickname || data.data.username;
-    //             // 2.侧边栏欢迎语设置
-    //             $('#welcome').html(res)
-    //             console.log(data);
-    //             // 3.判断头像是否存在 
-    //             if (data.data.user_pic) {
-    //                 // 3.1 头像存在
-    //                 $('.text-avatar').hide()
-    //                 $('.layui-nav-img').show().attr('src', 'data.data.user_pic')
-    //             } else {
-    //                 // 3.2 头像不存在
-    //                 $('.layui-nav-img').hide()
-    //                 $('.text-avatar').show().html(res[0].toUpperCase())
-    //             }
-    //         },
-    //         // 请求完后后
-    //         complete: function () {
-    //             console.log('complete')
-    //         }
-    //     });
-    // }
-    // getUserInfo()
+    function getUserInfo() {
+        var h = ''
+        $.ajax({
+            type: "get",
+            url: "/my/userinfo",
+            // data: "data",
+            // dataType: "dataType",
+            success: function (data) {
+                // console.log(data)
+                h = data
+                // if (data.status === 1) {
+                //     return false;
+                // }
+                if (data.status === 1) return
+                // 1.获取用户名 || 昵称
+                var res = data.data.nickname || data.data.username;
+                // 2.侧边栏欢迎语设置
+                $('#welcome').html(res)
+                // console.log(data);
+                // 3.判断头像是否存在 
+                if (data.data.user_pic) {
+                    // 3.1 头像存在
+                    $('.text-avatar').hide()
+                    $('.layui-nav-img').show().attr('src', 'data.data.user_pic')
+                } else {
+                    // 3.2 头像不存在
+                    $('.layui-nav-img').hide()
+                    $('.text-avatar').show().html(res[0].toUpperCase())
+                }
+            },
+        });
+    }
+    getUserInfo()
 
 
+
+
+    window.getUserInfo = getUserInfo
 
     /**
      * ! 右上角用户退出功能
