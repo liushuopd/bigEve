@@ -29,7 +29,7 @@ $(function () {
                 if (data.data.user_pic) {
                     // 3.1 头像存在
                     $('.text-avatar').hide()
-                    $('.layui-nav-img').show().attr('src', 'data.data.user_pic')
+                    $('.layui-nav-img').show().attr('src', data.data.user_pic)
                 } else {
                     // 3.2 头像不存在
                     $('.layui-nav-img').hide()

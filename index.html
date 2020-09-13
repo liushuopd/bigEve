@@ -29,8 +29,9 @@
                         个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">安全设置</a></dd>
+                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+                        <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -52,7 +53,6 @@
                     <span id="welcome">欢迎 ***</span>
                 </div>
 
-
                 <ul class="layui-nav layui-nav-tree" lay-shrink="all">
                     <li class="layui-nav-item layui-this">
                         <a href="/home/dashboard.html" target="fm">
@@ -65,13 +65,16 @@
                             文章管理</a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 文章类别</a>
+                                <a href="/article/art_cate.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    文章类别</a>
                             </dd>
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 文章列表</a>
+                                <a href="/article/art_list.html" target="fm"><i class="layui-icon layui-icon-app"></i>
+                                    文章列表</a>
                             </dd>
                             <dd>
-                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i> 发表文章</a>
+                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>
+                                    发表文章</a>
                             </dd>
                         </dl>
                     </li>
@@ -112,7 +115,6 @@
     <script src="/assets/lib/jquery.js"></script>
 
     <script src="/assets/lib/layui/layui.all.js"></script>
-
     <script src="/assets/js/utils.js"></script>
     <script src="/assets/js/index.js"></script>
 </body>
