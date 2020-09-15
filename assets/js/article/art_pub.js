@@ -25,7 +25,6 @@ $(function () {
     $('#chooseImage').on('click', function () {
         $('#file').click()
     })
-
     /**
      * 图片预览
      */

@@ -24,6 +24,7 @@ $(function () {
         // console.log(e.target);
         // console.log(e.target.files);
         // console.log(e.target.files[0]);
+        // console.log(this.files[0]);
         var file = e.target.files[0];
         var newImgURL = URL.createObjectURL(file);
 

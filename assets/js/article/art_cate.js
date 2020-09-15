@@ -29,7 +29,6 @@ $(function () {
             content: $('#add').html() // 内容，可以使用字符串，也可以使用DOM
         });
     })
-
     // 代理事件 添加
     $('body').on('submit', '#addForm', function (e) {
         e.preventDefault();
@@ -47,6 +46,7 @@ $(function () {
             }
         );
     })
+
 
     // 根据按钮找到数据 传递给对应表单 编辑
     $('body').on('click', '.edit', function (e) {
@@ -97,11 +97,11 @@ $(function () {
         e.preventDefault();
         var formdata = $(this).serialize();
 
-        console.log(formdata);
+        // console.log(formdata);
         $.post("/my/article/updatecate", formdata,
             function (data) {
                 if (data.status === 0) {
-                    console.log(data);
+                    // console.log(data);
                     // layui.layer.close(edit_id)
                     initTable()
                 }
@@ -121,7 +121,7 @@ $(function () {
         }, function (index) {
             $.get("/my/article/deletecate/" + id,
                 function (data) {
-                    console.log(data)
+                    // console.log(data)
                     if (data.status === 0) {
                         initTable()
                         layer.close(index);

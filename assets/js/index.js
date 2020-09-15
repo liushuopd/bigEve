@@ -7,7 +7,7 @@ $(function () {
      */
     // 获取用户信息
     function getUserInfo() {
-        var h = ''
+        // var h = ''
         $.ajax({
             type: "get",
             url: "/my/userinfo",
@@ -15,7 +15,7 @@ $(function () {
             // dataType: "dataType",
             success: function (data) {
                 // console.log(data)
-                h = data
+                // h = data
                 // if (data.status === 1) {
                 //     return false;
                 // }
@@ -36,12 +36,10 @@ $(function () {
                     $('.text-avatar').show().html(res[0].toUpperCase())
                 }
             },
+
         });
     }
     getUserInfo()
-
-
-
 
     window.getUserInfo = getUserInfo
 

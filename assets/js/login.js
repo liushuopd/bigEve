@@ -60,5 +60,6 @@ $(function () {
             }
             layui.layer.msg(data.message);
         })
+
     })
 });

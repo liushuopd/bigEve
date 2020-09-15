@@ -43,7 +43,6 @@ $(function () {
                     $('#sel_01').html(template('tpl-cate', data))
                     layui.form.render()
                 }
-                console.log(data);
             }
         );
     }

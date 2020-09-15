@@ -13,6 +13,7 @@ $.ajaxPrefilter(function (options) {
 
     // 请求完成后的回调 封装
     options.complete = function (xhr) {
+        // console.log(xhr);
         if (xhr.responseJSON.status === 1) {
             // 回到登录页
             location.href = '/login.html'
