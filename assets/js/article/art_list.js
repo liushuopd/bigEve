@@ -3,6 +3,7 @@ $(function () {
     template.defaults.imports.formatDate = function (value) {
         return moment(value).format('MMMM Do YYYY, h:mm:ss a');
     }
+
     /**
      * 定义获取文章列表请求参数
      */
@@ -16,8 +17,9 @@ $(function () {
         // state 否 string 文章的状态， 可选值有： 已发布、 草稿
         state: $('[name=state]').val(),
     }
+
     /**
-     * ! 获取文章的列表数据
+     *  获取文章的列表数据
      */
     function initList() {
         $.get("/my/article/list", q,
